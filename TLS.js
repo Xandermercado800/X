@@ -68,7 +68,7 @@ const time = process.argv[3];
 const requestIP = process.argv[4];
 const threads = process.argv[5];
 const host = url.parse(target).host;
-
+/*
 var PROXYURL = `https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=ih4bqgny30vgwgprvvrh&type=displayproxies&country[]=all&protocol=http&format=normal&status=all`;
 
 log('[info] Loading proxies..');
@@ -80,7 +80,7 @@ var res = syncRequest("GET", PROXYURL, {
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101 Firefox/77.0",
       },
     });
-    var proxies = res.getBody("utf8").replace(/\r/g, "").split("\n");
+    var proxies = res.getBody("utf8").replace(/\r/g, "").split("\n"); */
 var proxies = fs
   .readFileSync("proxy.txt", "utf-8")
   .toString()
