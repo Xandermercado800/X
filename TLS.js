@@ -80,7 +80,7 @@ var res = syncRequest("GET", PROXYURL, {
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101 Firefox/77.0",
       },
     });
-    var proxies = res.getBody("utf8").replace(/\r/g, "").split("\n"); */
+    var proxies = res.getBody("utf8").replace(/\r/g, "").split("\n");
 var proxies = fs
   .readFileSync("proxy.txt", "utf-8")
   .toString()
